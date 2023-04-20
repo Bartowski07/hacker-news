@@ -1,11 +1,14 @@
-import React from "react";
-import {StoriesContainer} from './containers/StoriesContainer';
+import { StoriesContainer } from "./containers/StoriesContainer";
 
 
-
-
-export const App = () => <StoriesContainer />;
-   
+    function App() {
+        return <div className='App'>
+            <StoriesContainer />
+        </div>
+      }
+      
+      export default App;
+  
 
   
 
