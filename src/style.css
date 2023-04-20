@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.article {
+  display: flex;
+}
