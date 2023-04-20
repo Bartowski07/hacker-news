@@ -3,7 +3,18 @@ import React from "react";
 function Header() {
   return (
     <div className="header">
-      <h1>HEADER COMP</h1>
+      <span id="spany">Y</span>
+      <span id="spanh">Hacker News</span>
+      <ul>
+        <li>new</li>
+        <li>past</li>
+        <li>comments</li>
+        <li>ask</li>
+        <li>show</li>
+        <li>jobs</li>
+        <li>submit</li>
+      </ul>
+      <span>login</span>
     </div>
   );
 }

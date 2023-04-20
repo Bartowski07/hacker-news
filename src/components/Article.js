@@ -15,18 +15,19 @@ function Article() {
       <ol>
         {stories.map((story) => (
           <li key={story.id}>
-            <h4>{story.title}</h4>
-            <h4>{story.points}</h4>
-            <h4>{story.num_comments}</h4>
-            <h4>
+            <h5>{story.title}</h5>
+            <h5>{story.points}</h5>
+            <h5>{story.num_comments}</h5>
+            <h5>
               <a href={story.url} target="_blank" rel="noopener noreferrer">
                 {story.url}
               </a>
-            </h4>
-            <h4>{story.author}</h4>
+            </h5>
+            <h5>{story.author}</h5>
           </li>
         ))}
       </ol>
+      <div id="more">More</div>
     </div>
   );
 }
