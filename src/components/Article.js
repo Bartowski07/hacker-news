@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 function Article() {
-  const [pokemons, setPokemons] = useState([]);
+  const [stories, setStories] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon")
+    fetch("https://hn.algolia.com/api")
       .then((response) => response.json())
-      .then((json) => setPokemons(json.results));
+      .then((json) => setStories(json.results));
   }, []);
 
   return (
     <div>
       <ol>
-        {pokemons.map((pokemon) => (
-          <li key={pokemon.name}>
-            <h4>{pokemon.name}</h4>
-            <h4>{pokemon.url}</h4>
+        {stories.map((story) => (
+          <li key={story.id}>
+            <h4>{story.created_at}</h4>
+            <h4>{story.author}</h4>
           </li>
         ))}
       </ol>
