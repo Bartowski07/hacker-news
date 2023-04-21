@@ -4,12 +4,15 @@ import Header from "./components/Header";
 import Article from "./components/Article";
 import Footer from "./components/Footer";
 
+
 function App() {
-  return (
+  const [results,setResults]=useState([]);
+    return (
     <div className="App">
       <Header />
       <Article />
-      <Footer />
+      <Footer setResults={setResults}/>
+     
     </div>
   );
 }
