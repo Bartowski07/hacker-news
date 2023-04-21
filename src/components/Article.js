@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 function Article() {
   const [stories, setStories] = useState([]);
 
+
   useEffect(() => {
     fetch("http://hn.algolia.com/api/v1/search?tags=front_page")
       .then((response) => response.json())
@@ -28,6 +29,7 @@ function Article() {
         ))}
       </ol>
       <div id="more">More</div>
+      
     </div>
   );
 }
