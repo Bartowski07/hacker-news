@@ -9,18 +9,13 @@ function App() {
   const [term, setTerm] = useState(null);
 
   useEffect(() => {
-    fetch(`http://hn.algolia.com/api/v1/search?tags=front_page`)
+    let url = "http://hn.algolia.com/api/v1/search";
+    let query = term ? `query=${term}` : "tags=front_page";
+
+    fetch(`${url}?${query}`)
       .then((response) => response.json())
       .then((json) => setStories(json.hits))
       .catch((error) => console.log(error));
-  }, []);
-
-  useEffect(() => {
-    if (term != null)
-      fetch(`http://hn.algolia.com/api/v1/search?query=${term}`)
-        .then((response) => response.json())
-        .then((json) => setStories(json.hits))
-        .catch((error) => console.log(error));
   }, [term]);
 
   return (
