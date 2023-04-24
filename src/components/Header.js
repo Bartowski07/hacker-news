@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className="header">
       <span id="spany">Y</span>
-      <span id="spanh">Hacker News</span>
+      <span id="spanh">Hacker&nbsp;&nbsp;News</span>
       <ul>
         <li>new</li>
         <li>past</li>
