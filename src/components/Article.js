@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Article() {
-  const [stories, setStories] = useState([]);
-
-  useEffect(() => {
-    fetch("http://hn.algolia.com/api/v1/search?tags=front_page")
-      .then((response) => response.json())
-      .then((json) => setStories(json.hits))
-      .catch((error) => console.log(error));
-  }, []);
-
+function Article({ stories }) {
   return (
     <div className="article">
       <ol>

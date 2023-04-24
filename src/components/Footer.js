@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer() {
+function Footer({ term, setTerm }) {
   return (
     <div className="footer">
       <p>Applications are open for YC Summer 2023</p>
@@ -16,7 +16,11 @@ function Footer() {
       </ul>
       <div id="search">
         Search: 
-        <input type="text" />
+        <input
+          type="text"
+          value={term}
+          onChange={(e) => setTerm(e.target.value)}
+        />
       </div>
     </div>
   );
